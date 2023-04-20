@@ -3,6 +3,7 @@ import sys
 from dataclasses import dataclass
 
 from catboost import CatBoostRegressor
+
 from sklearn.ensemble import (
     AdaBoostRegressor,
     GradientBoostingRegressor,
@@ -110,10 +111,6 @@ class ModelTrainer:
 
             r2_square = r2_score(y_test, predicted)
             return r2_square
-            
-
-
-
             
         except Exception as e:
             raise CustomException(e,sys)
